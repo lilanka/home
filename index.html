@@ -17,13 +17,20 @@
             justify-content: center;
             align-items: center;
             font-family: 'Courier New', monospace;
-            overflow: hidden;
+            padding: 20px 0;
         }
         .container {
             position: relative;
-            width: 600px;
-            height: 900px;
+            width: 100%;
+            max-width: 600px;
+            min-height: 100vh;
             background: #e8e4d8;
+        }
+        @media (min-width: 768px) {
+            .container {
+                min-height: 900px;
+                height: 900px;
+            }
         }
         .section {
             position: absolute;
@@ -73,6 +80,14 @@
         }
         .info-table td:first-child {
             font-weight: normal;
+        }
+        @media (max-width: 767px) {
+            .text {
+                font-size: 11px;
+            }
+            .info-table td {
+                padding: 2px 5px 2px 0;
+            }
         }
     </style>
 </head>
